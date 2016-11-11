@@ -140,7 +140,10 @@ FRAGMENT
 
 # We want static memory here
 # A 2x2 flat-screen set of coordinates for the triangles
-my @vertices = ( -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0 );
+my @vertices = (    #
+    -1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
+    1.0,  -1.0, 1.0, 1.0,  -1.0, 1.0
+);
 my $vertices = pack_GLfloat( @vertices );
 my $VAO;
 my $VBO_Quad;
@@ -209,7 +212,9 @@ my $frame_second = int time;
 my $frames;
 my $iMouse = pack_GLfloat( 0, 0, 0, 0 );
 
-my $config = { grab => 0, };
+my $config = {    #
+    grab => 0,
+};
 
 my $pipeline;
 my $glWidget;
