@@ -15,7 +15,7 @@ plan tests => $tests;
 glewCreateContext();
 glewInit();
 
-my $opengl_version = glGetString(GL_VERSION);
+my $opengl_version = glGetString( GL_VERSION );
 isn't '', $opengl_version;
 
 diag "We got OpenGL version $opengl_version";
